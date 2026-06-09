@@ -8,9 +8,12 @@ public class App {
 
             Menu menu = new Menu(scanner);
             Display display = new Display();
+            Board board = new Board();
 
             display.welcome();
             menu.playerName();
+            display.printBoard(board.getBoard());
 
         }
+
 }
