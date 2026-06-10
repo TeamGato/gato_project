@@ -16,4 +16,7 @@ public class Board {
     public char[][] getBoard() {
         return board;
     }
+    public void updateBoard(int row, int col, char symbol) {
+        board[row][col] = symbol;
+    }
 }
