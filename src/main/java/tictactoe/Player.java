@@ -1,7 +1,6 @@
 package tictactoe;
 import java.util.Scanner;
 
-
 // persona (player 1)
 // maquina (player 2)
 public class Player {
@@ -42,8 +41,17 @@ public void makeMove(Board board) {
     int translatedRow = translateRow(row);
     int translatedCol = translateCol(col);
 
-    board.updateBoard(translatedRow, translatedCol, symbol);
+    if (translatedRow == -1 || translatedCol == -1) {
+        System.out.println("¡Movimiento inválido! Usa filas A-C y columnas 1-3.");
+        makeMove(board);
+    } else if (board.isCellAvailable(translatedRow, translatedCol)) {
+        board.updateBoard(translatedRow, translatedCol, symbol);
+    } else {
+        System.out.println("¡Celda ocupada! Elige otra posición.");
+        makeMove(board);
+    }
 }
+
 public String getName() {
     return name;
 }
