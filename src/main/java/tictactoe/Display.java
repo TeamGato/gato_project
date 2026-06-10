@@ -1,4 +1,3 @@
-
 package tictactoe;
 
 // Welcome (reglas)
@@ -21,8 +20,8 @@ public class Display{
         System.out.println("6. Si el tablero se llena y no hay línea, es EMPATE.\n");
         System.out.println("          ¡BUENA SUERTE!\uD83D\uDE3C");
         System.out.println("=========================================\n");
-
     }
+
     public void printBoard(char[][] board) {
         System.out.println(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2]);
         System.out.println("---|---|---");
@@ -31,6 +30,5 @@ public class Display{
         System.out.println(" " + board[2][0] + " | " + board[2][1] + " | " + board[2][2]);
         }
     }
-
 
 
