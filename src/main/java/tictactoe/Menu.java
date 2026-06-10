@@ -10,8 +10,10 @@ public class Menu {
         this.scanner = scanner;
     }
 
-    public void playerName() {
+    public String playerName() {
         System.out.println("Introduce tu nombre: ");
         String name = scanner.nextLine();
+        return name;
     }
+
 }
