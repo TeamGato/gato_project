@@ -9,17 +9,12 @@ public class App {
             Menu menu = new Menu(scanner);
             Display display = new Display();
             Board board = new Board();
-            String playerName = menu.playerName();
-            Player player = new Player(playerName, 'X', scanner);
-
-
 
             display.welcome();
-            menu.playerName();
+            String playerName = menu.playerName();
+            Player player = new Player(playerName, 'X', scanner, true);
+            Player machine = new Player("Ordenador", 'O', scanner, false);
+
             display.printBoard(board.getBoard());
-
-
-
         }
-
 }
