@@ -1,8 +1,9 @@
 package tictactoe;
 import java.util.Scanner;
 
-// metodo de entrada: crear nombre jugador  y iniciar partida y salir del juego
-// metodo salida: iniciar partida y salir del juego
+// método de entrada: crear nombre jugador  y iniciar partida y salir del juego
+// método salida: iniciar partida y salir del juego
+
 public class Menu {
     private Scanner scanner;
 
@@ -15,6 +16,7 @@ public class Menu {
         String name = scanner.nextLine();
         return name;
     }
+  
     public String menuRestart() {
         System.out.println("\n=========================");
         System.out.println("    1. Volver a Jugar");
@@ -25,5 +27,4 @@ public class Menu {
         String option = scanner.nextLine();
         return option;
     }
-
 }

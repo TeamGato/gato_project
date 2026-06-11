@@ -3,7 +3,8 @@ import java.util.Scanner;
 import java.util.Random;
 
 // persona (player 1)
-// maquina (player 2)
+// ordenador (player 2)
+
 public class Player {
     private String name;
     private char symbol;
@@ -25,6 +26,7 @@ public int translateRow(char row) {
         default: return -1;
     }
 }
+
 public int translateCol(char col) {
     switch (col) {
         case '1': return 0;

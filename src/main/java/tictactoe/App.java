@@ -29,6 +29,7 @@ public class App {
         private static void init(Scanner scanner, Menu menu) {
             Display display = new Display();
             Board board = new Board();
+
             display.welcome();
             String playerName = menu.playerName();
             Player player = new Player(playerName, 'X', scanner, true);
