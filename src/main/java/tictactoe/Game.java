@@ -46,7 +46,18 @@ public class Game {
         if (b[0][2] == symbol  && b[1][1] == symbol  && b[2][0] == symbol) {
             return true;
         }
-
         return false;
+    }
+    public boolean checkDraw(){
+        char[][] b = board.getBoard();
+        for (int row = 0; row < 3; row++) {
+            for (int col = 0; col < 3; col++) {
+                if (b[row][col] == ' ') {
+                    return false;
+                }
+            }
+        }
+
+        return true;
     }
 }

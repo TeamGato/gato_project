@@ -30,6 +30,9 @@ public class App {
             game.play();
             game.play();
             game.play();
+            game.play();
+            game.play();
+            game.play();
 
         }
 }
