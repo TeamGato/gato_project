@@ -15,5 +15,15 @@ public class Menu {
         String name = scanner.nextLine();
         return name;
     }
+    public String menuRestart() {
+        System.out.println("\n=========================");
+        System.out.println("    1. Volver a Jugar");
+        System.out.println("    2. Salir");
+        System.out.println("=========================");
+        System.out.print("Elige una opción: ");
+
+        String option = scanner.nextLine();
+        return option;
+    }
 
 }
