@@ -22,7 +22,6 @@ public class Display{
         System.out.println("=========================================\n");
     }
 
-
     public void printBoard(char[][] board) {
         System.out.println("    1   2   3");
         System.out.println("  -------------");
@@ -34,5 +33,3 @@ public class Display{
         System.out.println("  -------------");
         }
     }
-
-
