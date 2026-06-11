@@ -1,8 +1,9 @@
 package tictactoe;
 
-//Elegir la casilla
-//Lógica de la partida (estado de las fichas)
-//Lógica estado final de la partida (ganador, perdedor, empate)
+/**
+ * Controls the main game glow.
+ * Manages player turns, checks for winning conditions, and determines when the game ends in a win or a draw.
+ */
 
 public class Game {
     private Board board;

@@ -1,6 +1,9 @@
 package tictactoe;
 
-// tablero 3x3 y actualización de los movimientos
+/**
+ * Represents the 3x3 Tic-Tac-Toe board.
+ * Handles board initialization, symbol placement and cell availability checks.
+ */
 
 public class Board {
 

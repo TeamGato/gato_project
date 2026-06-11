@@ -1,9 +1,9 @@
 package tictactoe;
 
-// Welcome (reglas)
-// Mostrar el tablero
-// impresión resumen
-// Llamar menu salida
+/**
+ * Handles all console output for the Tic-Tac-Toe game.
+ * Displays the welcome message, game instructions, and renders the current state of the board.
+ */
 
 public class Display{
     public void welcome() {

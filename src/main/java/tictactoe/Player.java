@@ -2,8 +2,10 @@ package tictactoe;
 import java.util.Scanner;
 import java.util.Random;
 
-// persona (player 1)
-// ordenador (player 2)
+/**
+ * Represents a player in the Tic-Tac-Toe game.
+ * Supports both human and computer-controlled players and handles move selection and board interaction.
+ */
 
 public class Player {
     private String name;

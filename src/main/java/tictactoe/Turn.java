@@ -1,6 +1,9 @@
 package tictactoe;
 
-//Asignación de turnos
+/**
+ * Manages player turns in the Tic-Tac-Toe game.
+ * Keeps track of the current player and switches between player 1 and player 2 after each move.
+ */
 
 public class Turn {
 

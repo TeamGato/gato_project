@@ -1,8 +1,10 @@
 package tictactoe;
 import java.util.Scanner;
 
-// método de entrada: crear nombre jugador  y iniciar partida y salir del juego
-// método salida: iniciar partida y salir del juego
+/**
+ * Handles user input from the console.
+ * Currently responsible for collecting the player's name.
+ */
 
 public class Menu {
     private Scanner scanner;
