@@ -10,9 +10,6 @@ public class App {
             Display display = new Display();
             Board board = new Board();
 
-
-
-
             display.welcome();
             String playerName = menu.playerName();
             Player player = new Player(playerName, 'X', scanner, true);
@@ -22,6 +19,5 @@ public class App {
 
             display.printBoard(board.getBoard());
             game.play();
-
         }
 }

@@ -4,7 +4,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class TestBoard {
+class BoardTest {
 
     private Board board;
 
@@ -14,7 +14,7 @@ class TestBoard {
     }
 
     @Test
-    void tableroIniciaVacio() {
+    void boardStartsEmpty() {
         char[][] grid = board.getBoard();
         for (int row = 0; row < 3; row++)
             for (int col = 0; col < 3; col++)
@@ -22,18 +22,18 @@ class TestBoard {
     }
 
     @Test
-    void casillaDisponibleInicialmente() {
+    void cellAvailableInitially() {
         assertTrue(board.isCellAvailable(0, 0));
     }
 
     @Test
-    void casillaOcupadaTrasMovimiento() {
+    void cellOccupiedAfterMove() {
         board.updateBoard(0, 0, 'X');
         assertFalse(board.isCellAvailable(0, 0));
     }
 
     @Test
-    void updateBoardColocaSimboloCorrectamente() {
+    void updateBoardPlacesSymbolCorrectly() {
         board.updateBoard(1, 1, 'O');
         assertEquals('O', board.getBoard()[1][1]);
     }
