@@ -28,12 +28,14 @@ public class Game {
                 System.out.println("¡" + current.getName() + " ha ganado!");
                 gameOver = true;
             } else if (checkDraw()) {
-                System.out.println("Empate");
+                System.out.println("¡Empate!");
                 gameOver = true;
             } else {
                 turn.switchTurn();
             }
         }
+
+
     }
 
     public boolean checkWinner(char symbol) {
