@@ -1,7 +1,6 @@
 package tictactoe;
-
+//Asignacion de turnos
 public class Turn {
-
 
     private Player player1;
     private Player player2;
