@@ -24,6 +24,12 @@ public class App {
             Game game = new Game(board, display, turn);
             game.play();
             game.play();
+            game.play();
+            game.play();
+            game.play();
+            game.play();
+            game.play();
+            game.play();
 
         }
 }
