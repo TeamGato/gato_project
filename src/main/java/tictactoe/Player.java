@@ -1,18 +1,23 @@
 package tictactoe;
 import java.util.Scanner;
+import java.util.Random;
 
+/**
+ * Represents a player in the Tic-Tac-Toe game.
+ * Supports both human and computer-controlled players and handles move selection and board interaction.
+ */
 
-// persona (player 1)
-// maquina (player 2)
 public class Player {
     private String name;
     private char symbol;
     private Scanner scanner;
+    private boolean isHuman;
 
-public Player(String name, char symbol, Scanner scanner) {
+public Player(String name, char symbol, Scanner scanner, boolean isHuman) {
     this.name = name;
     this.symbol = symbol;
     this.scanner = scanner;
+    this.isHuman = isHuman;
 }
 
 public int translateRow(char row) {
@@ -23,6 +28,7 @@ public int translateRow(char row) {
         default: return -1;
     }
 }
+
 public int translateCol(char col) {
     switch (col) {
         case '1': return 0;
@@ -32,7 +38,7 @@ public int translateCol(char col) {
     }
 }
 
-public void makeMove(Board board) {
+public void humanMove(Board board) {
     System.out.println("Introduce la fila (A-C): ");
     char row = scanner.nextLine().toUpperCase().charAt(0);
 
@@ -42,8 +48,38 @@ public void makeMove(Board board) {
     int translatedRow = translateRow(row);
     int translatedCol = translateCol(col);
 
-    board.updateBoard(translatedRow, translatedCol, symbol);
+    if (translatedRow == -1 || translatedCol == -1) {
+        System.out.println("¡Movimiento inválido! Usa filas A-C y columnas 1-3.");
+        humanMove(board);
+    } else if (board.isCellAvailable(translatedRow, translatedCol)) {
+        board.updateBoard(translatedRow, translatedCol, symbol);
+    } else {
+        System.out.println("¡Celda ocupada! Elige otra posición.");
+        humanMove(board);
+    }
 }
+
+public void machineMove (Board board) {
+    Random random = new Random();
+    int row, col;
+
+    do {
+        row = random.nextInt(3);
+        col = random.nextInt(3);
+    } while (!board.isCellAvailable(row, col));
+
+    board.updateBoard(row, col, symbol);
+    System.out.println("El ordenador jugó en la fila " + row + " columna " + col);
+}
+
+public void move(Board board) {
+    if (isHuman) {
+        humanMove(board);
+    } else {
+        machineMove(board);
+    }
+}
+
 public String getName() {
     return name;
 }
